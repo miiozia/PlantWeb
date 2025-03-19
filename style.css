@@ -18,7 +18,7 @@
     --bg-color: #ffffff;
     --text-color:  #000000;
     --main-color: #598562;
-    --secound-color:#c5eebe99 ;
+    --secound-color:#c5eebe ;
     --gray-color:#b9b9b983 ;
 
     --border-radius-1: .3rem;
@@ -78,6 +78,19 @@ img{
     width: 100%;
     object-fit: cover;
 }
+
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+
 
 /*navbar*/
 
@@ -222,22 +235,44 @@ small{
     gap: 4rem;
 }
 
+.Featured .post-thumb{
+    height: fit-content;
+}
 /* Post */
 .post-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 5rem;
+    margin-bottom: 5rem auto;
+}
+.post .post-thumb{
+    border: .8rem solid var(--gray-color);
+    border-radius: var(--border-radius-4) 0 ;
 }
 
+/* Category */
 
-/* scrollbar */
-::-webkit-scrollbar{
-    width: 10px;
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+    gap: 1rem;
+    text-align: center;
 }
-::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
+
+.Category{
+    padding: 4rem 0;
+    border-top: 2px solid var(--gray-color);
+    border-bottom: 2px solid var(--gray-color);
+    background: white;
 }
-::-webkit-scrollbar-track{
-    background-color: var(--bg-color);
-    width: 50px;
+
+/* Footer */
+footer{
+    background: var(--main-color);
+    padding: .5rem 0 ;
+   color: #ffffff;
+   text-align: center;
 }
+
 
